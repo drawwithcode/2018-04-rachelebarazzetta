@@ -16,6 +16,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   strokeWeight(20);
   stroke(0);
+  textFont('Helvetica')
 
 }
 
@@ -31,16 +32,12 @@ function mouseClicked() {
 
 function draw() {
 
-
-
   if (k == 0) {
     background('blue');
     dragInsect(0, mouseX, mouseY);
     for (var i = 0; i < x.length - 1; i++) {
       dragInsect(i + 1, x[i], y[i]);
       lightBull(mouseX, mouseY, 50);
-
-
     }
   } else if (k == 1) {
     background('green');
@@ -48,10 +45,13 @@ function draw() {
     for (var i = 0; i < x.length - 1; i++) {
       randomInsect(i + 1, x[i], y[i]);
       lightBullOff(mouseX, mouseY, 50);
-
     }
   }
 
+    fill('white');
+    noStroke();
+    textSize(16);
+    text('click to turn on and off the light',50, 50);
 }
 
 function dragInsect(i, xin, yin) {
