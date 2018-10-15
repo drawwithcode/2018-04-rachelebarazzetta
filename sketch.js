@@ -54,7 +54,7 @@ function draw() {
     fill('white');
     noStroke();
     textSize(16);
-    text('click to turn on and off the light',50, 50);
+    text('click to turn on and off the light',windowWidth-250, windowHeight-20);
 }
 
 function dragInsect(i, xin, yin) {
