@@ -61,8 +61,8 @@ function dragInsect(i, xin, yin) {
   var dx = xin - x[i];
   var dy = yin - y[i];
   var angle = atan2(dy, dx);
-  x[i] = xin - cos(angle) * insectBody * random(0, 4);
-  y[i] = yin - sin(angle) * insectBody * random(0, 4);
+  x[i] = xin - cos(angle) * random(0,100);
+  y[i] = yin - sin(angle) * random(0,100);
   Insect(x[i], y[i], angle);
 }
 
