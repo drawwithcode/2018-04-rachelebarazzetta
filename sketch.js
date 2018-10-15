@@ -18,7 +18,8 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   strokeWeight(20);
   stroke(0);
-  textFont('Helvetica')
+  textFont('Helvetica');
+  frameRate(60);
 
 }
 
@@ -39,7 +40,7 @@ function draw() {
     dragInsect(0, mouseX, mouseY);
     for (var i = 0; i < x.length - 1; i++) {
       dragInsect(i + 1, x[i], y[i]);
-    LightBullOn = new  lightBull(mouseX, mouseY, 50, color(242, 155, 18), color(240, 195,15), color(229, 126, 34));
+    LightBullOn = new  lightBull(mouseX, mouseY, 50, color(240, 195,15), color(242, 155, 18), color(229, 126, 34));
     LightSign = new  light(mouseX, mouseY, 7);
     }
   } else if (k == 1) {
@@ -47,7 +48,7 @@ function draw() {
     randomInsect(0, random(), random());
     for (var i = 0; i < x.length - 1; i++) {
       randomInsect(i + 1, x[i], y[i]);
-      LightBullOff = new  lightBull(mouseX, mouseY, 50, color(24, 170, 234), color(20, 206, 237), color(36, 139, 244));
+      LightBullOff = new  lightBull(mouseX, mouseY, 50, color(20, 206, 237), color(24, 170, 234), color(36, 139, 244));
     }
   }
 
